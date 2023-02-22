@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<style>
+body{
+  background: #308bc9  ;
+}
+    .box{ 
+       width:500px;
+ border-radius: 9px;  
+        margin-top:2%;
+         padding: 70px;
+        background:   #589dcd  ;
+        color: aliceblue;
+    }
+    .btn{
+        color: rgb(10, 90, 160);
+        background-color: aqua;
+        border: none;
+        padding: 15px;
+        border-radius: 9px; 
+        
+    }
+    #num2 , #num1{
+         padding: 20px;
+         width: 300px;
+ border: none;
+ border-radius: 4px;
+    }
+.name{
+ text-transform: uppercase;
+margin-bottom: 2em;
+color: #FFF;
+
+ }
+</style>
+<body>
+ <center>
+      
+     
+    <div class=" box">
+<h1 class="name" > <b>Calculator</b> </h1>
+
+        <label for="#num1">Num1:</label><input type="text" id="num1">
+        <br><br><br>
+        Num2:<input type="text" id="num2">
+        <br><br><br>
+        <button class="btn"  onclick="Add()">ADD</button>
+        <button class="btn"   onclick="sub()">SUB</button>
+        <button class="btn"  onclick="mul()">MULTI</button>
+        <button class="btn"  onclick="Div()">Div</button>
+        <br>
+        
+          <h1> Result: <span id="res" style="color: #000;"> </span></h1> 
+
+    </div>
+  
+  </center>
+
+
+
+    <script>
+        var num1, num2, res = 0;
+        document.getElementById("res").innerHTML = " "
+
+        function Add() {
+            num1 = parseInt(document.getElementById("num1").value);
+            num2 = parseInt(document.getElementById("num2").value);
+            res = (num1 + num2);
+            document.getElementById("res").innerHTML = res
+        }
+        function sub() {
+            num1 = parseInt(document.getElementById("num1").value);
+            num2 = parseInt(document.getElementById("num2").value);
+            res = (num1 - num2);
+            document.getElementById("res").innerHTML = res
+        }
+        function mul() {
+            num1 = parseInt(document.getElementById("num1").value);
+            num2 = parseInt(document.getElementById("num2").value);
+            res = (num1 * num2);
+            document.getElementById("res").innerHTML = res
+        }
+
+        function Div() {
+            num1 = parseInt(document.getElementById("num1").value);
+            num2 = parseInt(document.getElementById("num2").value);
+            res = (num1 / num2);
+            document.getElementById("res").innerHTML = res
+        }
+
+
+    </script>
+</body>
+
+</html>
